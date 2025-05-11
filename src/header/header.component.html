@@ -16,7 +16,8 @@
             <a href="">Pick-up</a>
             <a href="">Shops</a>
             <div class="authenticate">
-                <button class="btn-login">Login</button>
+                <button (click)="openModal()" class="btn-login">Login</button>
+                <app-auth-modal [isOpen]="isModalOpen"></app-auth-modal>
                 <button class="btn-signup">Sign Up</button>
             </div>
         </div>
