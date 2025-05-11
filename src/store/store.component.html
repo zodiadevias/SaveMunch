@@ -1,0 +1,74 @@
+<app-header></app-header>
+<div class="top">
+    <img src="img/logo.svg" alt="logo" class="logo">
+    <div class="block">
+        <h1>Store Name</h1>
+        <div class="flex">
+            <i class="star fa-solid fa-star"></i>
+            <h2>5.0</h2>
+            <h3 class="review" (click)="openModal()">123 Reviews</h3>
+                <app-reviews [isOpen]="isModalOpen" [title]="'Reviews'" (closeModal)="closeModal()">
+                    <p style="color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo cumque eveniet ea nam, error eius. Repellendus dolores tempora eos quia nostrum, perspiciatis modi beatae, et cum voluptas, tenetur pariatur impedit.</p>
+                </app-reviews>  
+            <h3>Delivery Time: 20-30 Mins</h3>
+        </div>
+    </div>
+</div>
+<div class="menu-heading">
+    <div class="flex">
+        <i class="clock fa-regular fa-clock"></i>
+        <h1>LIMITED-TIME-OFFERS</h1>
+    </div>
+    <h3>Don't miss out this items!</h3>
+</div>
+<div class="menu">
+    
+    
+        <div class="flex">
+            <div *ngFor="let i of [1,2,3]" class="store-item">
+                
+            </div>
+        </div>
+        <div class="flex">
+            <div *ngFor="let i of [1,2,3]" class="store-item">
+            
+            </div>
+        </div>
+        
+    
+    
+    
+</div>
+
+<div class="cart">
+    <div class="cart-btn">
+        <button class="btn-cart">Delivery</button>
+        <button class="btn-cart">Pick-up</button>
+    </div>
+    <div class="cart-container">
+        @if(cart.length == 0){
+            <img class="empty" src="img/empty-cart.svg">
+            <p>You haven't added anything to your cart</p>
+        }
+        @else{
+            <h1>Cart is not empty</h1>
+        }
+    </div>
+
+    <div class="total-payment">
+        <table>
+            <tr>
+                <td><h2>Total</h2></td>
+                <td><p>(incl. fees and tax)</p></td>
+            </tr>
+            
+        </table>
+
+        <h2 class="price">Php 0.00</h2>
+        
+    </div>
+    <button class="btn-checkout">Review Payment and Address</button>
+                
+    
+    
+</div>

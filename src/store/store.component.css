@@ -1,0 +1,154 @@
+.top{
+    background: radial-gradient(circle at 50% 50%, #508D4E 0%, #1A5319 100%);
+    display: flex;
+    flex-direction: row;
+    color: white;
+    line-height: 0.1;
+    height: 300px;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.logo{
+    background-color: #FEFAE0;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    margin-right: 50px;
+    padding:0;
+}
+
+.star{
+    color: yellow;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex > * {
+    margin: 10px;
+    
+}
+
+.flex .review{
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+.clock{
+    font-size: 25px;
+}
+
+.menu{
+    padding-left: 50px;
+    margin-top: 0;
+    width: 69%;
+    height: 41%;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    &:hover {
+        scrollbar-color: #1A5319 #FEFAE0;
+    }
+}
+.menu-heading{
+    padding-left: 50px;
+}
+.menu-heading h3{
+    padding-left: 50px;
+}
+.store-item{
+    background-color: #FEFAE0;
+    width: 500px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.cart{
+    position: absolute;
+    padding: 15px;
+    right: 0;
+    bottom: 0;
+    margin: 50px;
+    margin-bottom: 0;
+    margin-right: 1px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 500px;
+    height: 600px;
+    background-color: #FEFAE0;
+}
+
+.btn-cart{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: none;
+    border-radius: 20px;
+    height: 50px;
+    width: 140px;
+    background-color: #D6EFD8;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.cart-btn{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.empty{
+    margin: 190px;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.cart-container{
+    text-align: center;
+}
+
+.total-payment{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    
+}
+
+.price{
+    position: absolute;
+    right: 0;
+}
+
+.btn-checkout{
+    position: absolute;
+    right: 25%;
+    bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: none;
+    border-radius: 20px;
+    height: 35px;
+    width: 250px;
+    background-color: #D6EFD8;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+
+
