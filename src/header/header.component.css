@@ -1,0 +1,30 @@
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #1A5319;
+    font-family: 'Poppins', sans-serif;
+    color: #FEFAE0;
+    
+
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+    width: 50%;
+    margin: auto;
+    font-size: medium;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: #FEFAE0;
+}
