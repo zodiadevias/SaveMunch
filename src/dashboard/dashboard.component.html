@@ -1,5 +1,7 @@
 <app-header></app-header>
-<div class="greet">
+
+@if(whatAmI == 'admin'){
+    <div class="greet">
     <img src="img/logo-with-title.svg" alt="logo" class="logo">
     <h2>Hello, {{name}}!</h2>
 </div>
@@ -18,3 +20,14 @@
   </div>
   
 </div>
+}
+
+@if(whatAmI == 'user'){
+
+}
+
+@if(whatAmI == 'guest'){
+    
+}
+
+
