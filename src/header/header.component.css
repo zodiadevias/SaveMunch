@@ -1,36 +1,91 @@
 .logo{
     width: 100px;
     height: 100px;
+
+}
+h3 {    
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 35px;
+    left : 115px; 
 }
 
 .flex-container{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
     align-items: center;
     background-color: #1A5319;
     font-family: 'Poppins', sans-serif;
     color: #FEFAE0;
-    
-
 }
 
-.links{
+.links {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;;
-    width: 50%;
-    margin: auto;
-    font-size: medium;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
-}
+    font-size: 20px;
 
-a{
-    text-decoration: none;
-    color: #FEFAE0;
-}
+    a {
+        margin: 0 10px;
+        color: #FEFAE0;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        top: 20px;
+        right :  1200px;
+    }
 
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .authenticate {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+} 
 .btn-login{
     background-color: #D6EFD8;
     color:#1A5319;
     border: 2px solid #508D4E;
+    border-radius: 5px;
+    width: 90px;
+    height: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-signup{
+    background-color: #508D4E;
+    color: white;
+    border: 2px solid #D6EFD8;
+    border-radius: 5px;
+    width: 90px;
+    height: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button{
+    margin: 10px;
+    position: relative;
+    top: 1px;
+    right : 400px;
+}
+
+.hamberger{
+    display: none;
 }
