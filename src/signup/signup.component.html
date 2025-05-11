@@ -1,0 +1,104 @@
+<app-header></app-header>
+
+@if(window == 'signup'){
+    <div class="signup-container">
+    <h1>Sign Up</h1>
+    <br>
+<table>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+    </tr>
+    <tr>
+        <td>
+            <input class="flname" type="text">
+        </td>
+        <td><input class="flname" type="text"></td>
+    </tr>
+    </table>
+    <table>
+        <tr>
+        <td>Address</td>
+    </tr>
+    <tr>
+        <td><input class="address" type="text"></td>
+    </tr>
+    </table>
+    <table>
+    <tr>
+        <td>Contact Number</td>
+    </tr>
+    <tr>
+        <td>
+            <select name="area-code" id="area-code">
+                <option value="+63">+63</option>
+            </select>
+            <input class="contact" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Password</td>
+    </tr>
+    <tr>
+        <td><input class="password" type="password"></td>
+    </tr>
+    <tr>
+        <td>Confirm Password</td>
+    </tr>
+    <tr>
+        <td><input class="password" type="password"></td>
+    </tr>
+</table>
+
+
+
+
+<button class="btn">Continue</button>
+<p class="terms">By signing up, you agree to our <a (click)="window = 'terms'">Terms and Conditions</a> and <a (click)="window = 'privacy'">Privacy Policy</a></p>
+
+    
+</div>
+}
+
+
+@if(window == 'terms'){
+    <div class="tc-container">
+        <h1>Terms and Conditions</h1>
+        <div class="terms-content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+        </div>
+
+        <button class="btn-close" (click)="window = 'signup'">Close</button>
+    </div>
+}
+
+@if(window == 'privacy'){
+    <div class="tc-container">
+        <h1>Privacy Policy</h1>
+        <div class="terms-content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
+        </div>
+
+        <button class="btn-close" (click)="window = 'signup'">Close</button>
+    </div>
+}
