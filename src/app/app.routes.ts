@@ -5,6 +5,7 @@ import { StoreComponent } from '../store/store.component';
 import { PaymentComponent } from '../payment/payment.component';
 import { DeliveryComponent } from '../delivery/delivery.component';
 import { PickupComponent } from '../pickup/pickup.component';
+import { BusinesssignupComponent } from '../businesssignup/businesssignup.component';
 export const routes: Routes = [
 
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -13,5 +14,6 @@ export const routes: Routes = [
     {path: 'store' , component: StoreComponent},
     {path: 'payment', component: PaymentComponent},
     {path: 'delivery', component: DeliveryComponent},
-    {path: 'pickup', component: PickupComponent}
+    {path: 'pickup', component: PickupComponent},
+    {path: 'businesssignup', component: BusinesssignupComponent},
 ];

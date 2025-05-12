@@ -1,0 +1,160 @@
+.signup-window{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    border: 1px solid red;
+    padding: 100px;
+}
+
+.left{
+    background-color: #FEFAE0;
+    margin: 20px;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+    position: relative;
+    bottom: 19px;
+    border-radius: 8px;
+    border: 2px solid #1A5319;
+}
+.picholder{
+    position: relative;
+    left: 100px;
+    top: 40px;
+    border-radius: 8px;
+    border: 2px dashed #1A5319;
+    width: 200px;
+    height: 200px;
+}
+.picholder i{
+    position: relative;
+    left: 80px;
+    top: 30px;
+    font-size: 50px;
+    color: #1A5319;
+}
+.picholder p{
+    position: relative;
+    left: 60px;
+    top: 30px;
+    font-size: 15px;
+    color: #1A5319;
+}
+.btn-local{
+    position: relative;
+    left: 30px;
+    top: 30px;
+    border-radius: 5px;
+    border: 2px solid #1A5319;
+    background-color: #1A5319;
+    color: #FEFAE0;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+}
+.btn-submit {
+    position: relative;
+    left: 60px;
+    top: 70px;
+    border-radius: 5px;
+    border: 2px solid #1A5319;
+    background-color: #1A5319;
+    color: #FEFAE0;
+    height: 40px;
+    width: 300px;
+    cursor: pointer;
+}
+.right{
+    background-color: #FEFAE0;
+    flex-direction: column;
+    width: 1070px;
+    height: 670px;
+    border-radius: 8px;
+    border: 2px solid #1A5319;
+}
+
+table tr td{
+    color: #1A5319;
+    font-size: 17px;
+    position: relative;
+    left: 100px
+}
+
+input{
+    border-radius: 5px;
+    border: 2px solid #1A5319;
+    background-color: #FEFAE0;
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    
+}
+select{
+    border-radius: 5px;
+    border: 2px solid #1A5319;
+    background-color: #FEFAE0;
+    height: 36px;
+}
+.location {
+    border-radius: 5px;
+    border: 2px solid #1A5319;
+    background-color: #FEFAE0;
+    height: 45px;
+    width: 400px;
+}
+.area-code {
+    border-radius: 5px;
+    border: 2px solid #1A5319;
+    background-color: #FEFAE0;
+    height: 44px;
+    width: 50px;
+}
+h1{
+    color: #1A5319;
+    margin: 20px;
+}
+hr{
+    color: #1A5319;
+    margin: 30px;
+    border: 1px solid #1A5319;
+}
+.flname{
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+}
+.bir{
+    width: 250px;
+}
+.contact{
+    width: 300px;
+}
+.business-name{
+    width: 400px;
+}
+.address{
+    width: 530px;
+}
+.id{
+    width: 430px;
+}
+.password{
+    width: 380px;
+}
+.btn-signup{
+    border-radius: 5px;
+    border: 2px solid #1A5319;
+    background-color: #1A5319;
+    position: relative;
+    right: 10px;
+    top: 30px;
+    color: #FEFAE0;
+    height: 40px;
+    width: 150px;
+    margin-left: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right: 50px;
+}

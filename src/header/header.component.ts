@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { AuthModalComponent } from "../auth-modal/auth-modal.component";
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-header',
-  imports: [AuthModalComponent],
+  imports: [AuthModalComponent, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -16,4 +17,10 @@ openModal(): void {
 }
   whatAmI = 'guest';
 
+
+isOpen: boolean = false;
+
+toggleDropdown() {
+  this.isOpen = !this.isOpen;
+}
 }

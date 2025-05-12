@@ -127,5 +127,65 @@ button{
     padding: 5px;
     margin-right: 0;
 }
+.dropdowncontainer{
+    background-color: #508D4E;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    animation: slideDown 0.5s ease-out;
+}
+
+.dropbar a {
+    margin: 20px;
+    font-size: 20px;
+    color: #FEFAE0;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    position: relative;
+    top: 40px;
+    left :  310px;
+    padding: 20px;
+    margin-right: 0;
+}
+.icon {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+
+.chatsupport a {
+    margin: 20px;
+    font-size: 20px;
+    color: #FEFAE0;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    position: relative;
+    top: 15px;
+    left :  1500px;
+    padding: 5px;
+    margin-right: 0;
+}
+
+.chatsupport a:hover {
+    text-decoration: underline;
+}
+.dropbar a:hover {
+    text-decoration: underline;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
