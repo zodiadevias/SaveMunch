@@ -9,3 +9,83 @@ background: radial-gradient(circle at 50% 50%, #508D4E 0%, #1A5319 100%);
     padding-left: 50px;
 
 }
+.pickup-container{
+    position: absolute;
+    height: 70%;
+    left: 50%;
+    top: 61%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 900px;
+    
+}
+
+.left{
+    flex-direction: column;
+    width: 50%;
+    height: 94%;
+    
+}
+
+.right{
+    flex-direction: column;
+    width: 50%;
+    height: 94%;
+    
+}
+
+.topdiv{
+    border: 2px solid #1A5319;
+    border-radius: 10px;
+    height: 50%;
+    width: 100%;
+    background-color: #FEFAE0;
+}
+
+.botdiv{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #1A5319;
+    background-color: #FEFAE0;
+    border-radius: 10px;
+}
+
+.botright{
+    width: 50%;
+    height: 100%;
+    border-left: 2px solid #1A5319;
+    color: #1A5319;
+    
+}
+
+.botleft{
+    width: 50%;
+    height: 100%;
+    color: #1A5319;
+}
+
+.address{
+    border: 2px solid #1A5319;
+    border-radius: 10px;
+    width: 70%;
+    height: 10%;
+    margin-top: 30%;
+    margin-left: 20%;
+    background-color: #FEFAE0;
+    color: #1A5319;
+}
+
+.receipt{
+    border: 2px solid #1A5319;
+    border-radius: 10px;
+    width: 70%;
+    height: 58%;
+    background-color: #FEFAE0;
+    margin-left: 20%;
+    margin-top: 8%;
+    color: #1A5319;
+}
