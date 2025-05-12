@@ -8,6 +8,7 @@ import { PickupComponent } from '../pickup/pickup.component';
 import { BusinesssignupComponent } from '../businesssignup/businesssignup.component';
 import { MenuComponent } from '../menu/menu.component';
 import { BusinessreviewComponent } from '../businessreview/businessreview.component';
+import { ProfileComponent } from '../profile/profile.component';
 export const routes: Routes = [
     // kada update/change ng path please paki push agad sa git
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -19,5 +20,6 @@ export const routes: Routes = [
     {path: 'pickup', component: PickupComponent},
     {path: 'businesssignup', component: BusinesssignupComponent},
     {path: 'menu', component: MenuComponent},
-    {path: 'breviews', component: BusinessreviewComponent}
+    {path: 'breviews', component: BusinessreviewComponent},
+    {path: 'profile', component: ProfileComponent}
 ];
