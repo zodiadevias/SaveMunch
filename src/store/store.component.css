@@ -46,8 +46,8 @@
 .menu{
     padding-left: 50px;
     margin-top: 0;
-    width: 69%;
-    height: 41%;
+    width: 97%;
+    height: 42%;
     overflow-y: scroll;
     scrollbar-gutter: stable;
     scrollbar-color: transparent transparent;
@@ -89,6 +89,11 @@
     width: 500px;
     height: 600px;
     background-color: #FEFAE0;
+}
+
+.shopping-cart{
+    cursor: pointer;
+    font-size: 25px;
 }
 
 .btn-cart{

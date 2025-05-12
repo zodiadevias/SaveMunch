@@ -1,0 +1,91 @@
+.top{
+background: radial-gradient(circle at 50% 50%, #508D4E 0%, #1A5319 100%);
+    display: flex;
+    flex-direction: row;
+    color: white;
+    line-height: 0.1;
+    height: 300px;
+    align-items: center;
+    padding-left: 50px;
+
+}
+
+.payment-window{
+    position: absolute;
+    width: 75%;
+    height: 70%;
+    background-color: #FEFAE0;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.left{
+    flex-direction: column;
+    width: 50%;
+    height: 94%;
+    border: 1px solid blue;
+    padding: 20px;
+
+}
+
+.right{
+    flex-direction: column;
+    width: 50%;
+    height: 94%;
+    border: 1px solid red;
+    padding: 20px;
+}
+
+
+.topdiv{
+    margin: 20px;
+    padding: 20px;
+    background-color: #80AF81;
+    height: 40%;
+}
+
+.botdiv{
+    margin: 20px;
+    padding: 20px;
+    background-color: #80AF81;
+    height: 40%;
+}
+
+.receipt{
+    margin: 20px;
+    padding: 20px;
+    background-color: #D6EFD8;
+    height: 75%;
+}
+
+.btn{
+    
+    background-color: #508D4E;
+    border: 0;
+    right: 100px;
+    height: 40px;
+    width: 94.5%;
+    margin-left: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.mod{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #FEFAE0;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    width: 80%;
+}
+
+.mod-icon{
+    width: 25px;
+    height: 20px;
+}

@@ -9,6 +9,7 @@
             <h3 class="review" (click)="openModal()">123 Reviews</h3>
                 <app-reviews [isOpen]="isModalOpen" [title]="'Reviews'" (closeModal)="closeModal()"></app-reviews>  
             <h3>Delivery Time: 20-30 Mins</h3>
+            <i class="shopping-cart fa-solid fa-cart-shopping" (click)="toggleVisibility()"></i>
         </div>
     </div>
 </div>
@@ -38,7 +39,8 @@
     
 </div>
 
-<div class="cart">
+
+<div class="cart" *ngIf="isVisible == true">
     <div class="cart-btn">
         <button class="btn-cart">Delivery</button>
         <button class="btn-cart">Pick-up</button>

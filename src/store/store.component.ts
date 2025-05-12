@@ -11,14 +11,27 @@ import { ReviewsComponent } from '../reviews/reviews.component';
 })
 export class StoreComponent {
   isModalOpen: boolean = false;
+  isVisible: boolean = false;
 
 openModal(): void {
   this.isModalOpen = true;
+  this.isVisible = false;
   
 }
 closeModal(){
-  this.isModalOpen = false;
-  
+  this.isModalOpen = false; 
 }
   cart = [];
+
+
+  toggleVisibility(){
+    if(this.isVisible == true){
+      this.isVisible = false;
+    }
+    else{
+      this.isVisible = true;
+    }
+  }
+
+
 }

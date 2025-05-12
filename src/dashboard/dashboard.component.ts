@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent{
   name : string = 'Tinapayan';
   public chart: any;
   whatAmI = 'guest';
@@ -20,65 +20,65 @@ export class DashboardComponent implements OnInit {
 
 
 
-  ngOnInit(){
-    this.createChart('line','lineChart');
+  // ngOnInit(){
+  //   this.createChart('line','lineChart');
     
-  }
+  // }
 
 
-  constructor() { 
-    this.createChart('line','lineChart');
-  }
+  // constructor() { 
+  //   this.createChart('line','lineChart');
+  // }
   
-  createChart(t: any, name: any){
+  // createChart(t: any, name: any){
 
-    this.chart = new Chart(name, {
-      type: t,
+  //   this.chart = new Chart(name, {
+  //     type: t,
 
-      data: {
-        labels: [
-          ...Array.from({length: 31}, (_, i) => (i+1).toString())
-        ], 
-           datasets: [
-          {
-            label: "",
-            data: Array.from({length: 31}, (_, i) => ((i + Math.random()*100) * Math.random() * 10000).toString()),
-            backgroundColor: 'white',
-            borderColor: 'white',
-            borderWidth: 2,
-            fill: true,
-            pointBackgroundColor: '#1A5319',
+  //     data: {
+  //       labels: [
+  //         ...Array.from({length: 31}, (_, i) => (i+1).toString())
+  //       ], 
+  //          datasets: [
+  //         {
+  //           label: "",
+  //           data: Array.from({length: 31}, (_, i) => ((i + Math.random()*100) * Math.random() * 10000).toString()),
+  //           backgroundColor: 'white',
+  //           borderColor: 'white',
+  //           borderWidth: 2,
+  //           fill: true,
+  //           pointBackgroundColor: '#1A5319',
             
             
             
-          }
-        ]
-      },
-      options: {
+  //         }
+  //       ]
+  //     },
+  //     options: {
         
-        maintainAspectRatio: false,
-        labels: {
-          color: '#FEFAE0'
-        },
-        tooltip: {
-          bodyColor: '#FEFAE0'
-        },
-        scales: {
-          x: {
-            ticks: {
-              color: '#FEFAE0'
-            }
-          },
-          y: {
-            ticks: {
-              color: '#FEFAE0'
-            }
-          }
-        },
+  //       maintainAspectRatio: false,
+  //       labels: {
+  //         color: '#FEFAE0'
+  //       },
+  //       tooltip: {
+  //         bodyColor: '#FEFAE0'
+  //       },
+  //       scales: {
+  //         x: {
+  //           ticks: {
+  //             color: '#FEFAE0'
+  //           }
+  //         },
+  //         y: {
+  //           ticks: {
+  //             color: '#FEFAE0'
+  //           }
+  //         }
+  //       },
         
-      }
+  //     }
 
-    });
-  }
+  //   });
+  // }
 
 }

@@ -15,7 +15,7 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: 97.9%;
     padding: 10px 20px;
     align-items: center;
     background-color: #1A5319;
@@ -67,8 +67,12 @@ h3 {
     height: 35px;
     font-weight: bold;
     cursor: pointer;
+    margin-right: 0;
+    right: 170px;
+    position: relative;
 }
 .btn-signup{
+    position: relative;
     background-color: #508D4E;
     color: white;
     border: 2px solid #D6EFD8;
@@ -77,6 +81,9 @@ h3 {
     height: 35px;
     font-weight: bold;
     cursor: pointer;
+    margin-right: 0;
+    right: 170px;
+    
 }
 
 button{
@@ -85,6 +92,7 @@ button{
     position: relative;
     top: 1px;
     right : 400px;
+    margin-right: 0;
 }
 
 .hamberger i {
@@ -93,7 +101,8 @@ button{
     cursor: pointer;
     position: relative;
     top: 5px;
-    left : 1180px;
+    left : 1320px;
+    margin-right: 0;
 }
 
 .globe i {
@@ -102,7 +111,8 @@ button{
     cursor: pointer;
     position: relative;
     top: 5px;
-    left :  580px;
+    left :  800px;
+    margin-right: 0;
 }
 .globe a {
     font-size: 15px;
@@ -113,8 +123,9 @@ button{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     top: 2px;
-    left :  580px;
-    padding: 5px
+    left :  800px;
+    padding: 5px;
+    margin-right: 0;
 }
 
 
