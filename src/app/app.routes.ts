@@ -7,7 +7,7 @@ import { DeliveryComponent } from '../delivery/delivery.component';
 import { PickupComponent } from '../pickup/pickup.component';
 import { BusinesssignupComponent } from '../businesssignup/businesssignup.component';
 export const routes: Routes = [
-
+    // kada update/change ng path please paki push agad sa git
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
     {path: 'dashboard', component: DashboardComponent},
     {path: 'signup', component: SignupComponent},
