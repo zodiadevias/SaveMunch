@@ -7,3 +7,66 @@
     line-height: 0.1;
     
 }
+
+.content{
+    border: 1px solid #1A5319;
+    background-color: #FEFAE0;
+    width: 90%;
+    height: 49%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    color: #1A5319;
+    line-height: 0.1;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.menu{
+    
+    height: 90%;
+    overflow-y: scroll;
+    
+    scrollbar-gutter: stable;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    
+    &:hover {
+        scrollbar-color: #1A5319 #FEFAE0;
+    }
+    
+}
+
+.store-item{
+    background-color: #508D4E;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.store-item-add{
+    cursor: pointer;
+    font-size: 150px;
+    text-align: center;
+    background-color: #508D4E;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.store-item-add i{
+    margin-top: 15px;
+}
