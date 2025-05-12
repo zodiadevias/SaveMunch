@@ -6,6 +6,7 @@ import { PaymentComponent } from '../payment/payment.component';
 import { DeliveryComponent } from '../delivery/delivery.component';
 import { PickupComponent } from '../pickup/pickup.component';
 import { BusinesssignupComponent } from '../businesssignup/businesssignup.component';
+import { MenuComponent } from '../menu/menu.component';
 export const routes: Routes = [
     // kada update/change ng path please paki push agad sa git
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -16,4 +17,5 @@ export const routes: Routes = [
     {path: 'delivery', component: DeliveryComponent},
     {path: 'pickup', component: PickupComponent},
     {path: 'businesssignup', component: BusinesssignupComponent},
+    {path: 'menu', component: MenuComponent},
 ];
