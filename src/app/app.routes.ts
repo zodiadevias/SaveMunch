@@ -9,6 +9,8 @@ import { BusinesssignupComponent } from '../businesssignup/businesssignup.compon
 import { MenuComponent } from '../menu/menu.component';
 import { BusinessreviewComponent } from '../businessreview/businessreview.component';
 import { ProfileComponent } from '../profile/profile.component';
+import { InboxComponent } from '../inbox/inbox.component';
+import { HistoryComponent } from '../history/history.component';
 export const routes: Routes = [
     // kada update/change ng path please paki push agad sa git
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -21,5 +23,7 @@ export const routes: Routes = [
     {path: 'businesssignup', component: BusinesssignupComponent},
     {path: 'menu', component: MenuComponent},
     {path: 'breviews', component: BusinessreviewComponent},
-    {path: 'profile', component: ProfileComponent}
+    {path: 'profile', component: ProfileComponent},
+    {path: 'inbox', component: InboxComponent},
+    {path: 'history', component: HistoryComponent}
 ];
