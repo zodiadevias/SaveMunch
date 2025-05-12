@@ -3,11 +3,15 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { SignupComponent } from '../signup/signup.component';
 import { StoreComponent } from '../store/store.component';
 import { PaymentComponent } from '../payment/payment.component';
+import { DeliveryComponent } from '../delivery/delivery.component';
+import { PickupComponent } from '../pickup/pickup.component';
 export const routes: Routes = [
 
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
     {path: 'dashboard', component: DashboardComponent},
     {path: 'signup', component: SignupComponent},
     {path: 'store' , component: StoreComponent},
-    {path: 'payment', component: PaymentComponent}
+    {path: 'payment', component: PaymentComponent},
+    {path: 'delivery', component: DeliveryComponent},
+    {path: 'pickup', component: PickupComponent}
 ];
