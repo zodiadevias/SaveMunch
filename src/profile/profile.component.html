@@ -1,4 +1,221 @@
 <app-header></app-header>
 <div class="greet">
-    
+    <img src="img/logo-with-title.svg" alt="logo" class="logo">
 </div>
+
+@if(whatAmI == 'user'){
+    <div class="scroll">
+
+
+        <div class="parent-content">
+            <h1>Profile</h1>
+
+        <div class="content">
+            
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                </tr>
+                <tr>
+                    <td><input class="flname" type="text"></td>
+                    <td><input class="flname" type="text"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Address</td>
+                </tr>
+                <tr>
+                    <td><input class="address" type="text"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Contact Number</td>
+                </tr>
+                <tr>
+                    <td><input class="contact" type="text"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Email</td>
+                </tr>
+                <tr>
+                    <td><input class="email" type="text"></td>
+                </tr>
+            </table>
+            <button class="btn-save">Save</button>
+            <br>
+            <br>
+        </div>
+
+        <div class="parent-content">
+            <h1>Change Password</h1>
+
+
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>Old Password</td>
+                    </tr>
+                    <tr>
+                        <td><input class="password" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>New Password</td>
+                    </tr>
+                    <tr>
+                        <td><input class="password" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password</td>
+                    </tr>
+                    <tr>
+                        <td><input class="password" type="password"></td>
+                    </tr>
+                </table>
+                <button class="btn-save">Save</button>
+                <br>
+                <br>
+            </div>
+
+        </div>
+        <div class="parent-content">
+
+
+            <h1>Bind Account</h1>
+            <div class="bind">
+                
+                <div class="btn">
+                    <img src="img/gmail.svg" alt="google" class="imgbind">
+                    <p>Google</p>
+                </div>
+                <div class="btn">
+                    <img src="img/fb.svg" alt="facebook" class="imgbind">
+                    <p>Facebook</p>
+                </div>
+            </div>
+
+            <br>
+            <h1>Delete Account</h1>
+            <button class="btn-delete">Delete</button>
+            <br>
+            <br>
+        </div>
+        </div>
+
+</div>
+}
+
+
+@if(whatAmI == 'storeowner'){
+    <div class="scroll">
+        <div class="parent-content">
+            <h1>Profile</h1>
+
+            <div class="content">
+                
+                <table>
+                    <tr>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                    </tr>
+                    <tr>
+                        <td><input class="flname" type="text"></td>
+                        <td><input class="flname" type="text"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Email</td>
+                    </tr>
+                    <tr>
+                        <td><input class="email" type="text"></td>
+                    </tr>
+                </table>
+                <button class="btn-save">Save</button>
+                <br>
+                <br>
+            </div>
+
+        </div>
+
+
+        <div class="parent-content">
+            <h1>Store Profile</h1>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>Business Name</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><input class="flname" type="text"></td>
+                        
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Business Address</td>
+                    </tr>
+                    <tr>
+                        <td><input class="email" type="text"></td>
+                    </tr>
+                </table>
+                <button class="btn-save">Save</button>
+                <br>
+                <br>
+            </div>
+
+        </div>
+
+
+
+        <div class="parent-content">
+            <h1>Change Password</h1>
+
+
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>Old Password</td>
+                    </tr>
+                    <tr>
+                        <td><input class="password" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>New Password</td>
+                    </tr>
+                    <tr>
+                        <td><input class="password" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password</td>
+                    </tr>
+                    <tr>
+                        <td><input class="password" type="password"></td>
+                    </tr>
+                </table>
+                <button class="btn-save">Save</button>
+                <br>
+                <br>
+            </div>
+
+        </div>
+        <div class="parent-content">
+
+
+            
+
+            <br>
+            <h1>Delete Account</h1>
+            <button class="btn-delete">Delete</button>
+            <br>
+            <br>
+        </div>
+    </div>
+
+
+}
