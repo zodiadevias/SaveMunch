@@ -17,7 +17,7 @@
             <a href="">Shops</a>
             <div class="authenticate">
                 <button (click)="openModal()" class="btn-login">Login</button>
-                <app-auth-modal [isOpen]="isModalOpen"></app-auth-modal>
+                <app-auth-modal [isOpen]="isModalOpen" (closeModal)="closeModal()"></app-auth-modal>
                 <button class="btn-signup">Sign Up</button>
             </div>
         </div>

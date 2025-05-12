@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthModalComponent } from "../auth-modal/auth-modal.component";
+import { AuthModalComponent } from "../modal/auth-modal.component";
 import { CommonModule } from '@angular/common';
 
 
@@ -11,10 +11,17 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   isModalOpen: boolean = false;
+  isVisible: boolean = false;
 
 openModal(): void {
   this.isModalOpen = true;
+  this.isVisible = false;
 }
+
+closeModal() {
+  this.isModalOpen = false;
+}
+
   whatAmI = 'guest';
 
 
