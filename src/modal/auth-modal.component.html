@@ -69,3 +69,42 @@
   </div>
 </div>
 }
+
+<!-- -------------------------- End Partner html modal code ---------------------------->
+
+
+<!-- Reviews -->
+
+@if(whatami == 'reviews'){
+  <div class="r-modal-overlay" *ngIf="isOpen" (click)="close()">
+    <div class="r-modal-content" (click)="$event.stopPropagation()">
+      <div class="r-modal-header">
+        <h2 style="color: black">{{ title }}</h2>
+        <button class="close-button" (click)="close()">&times;</button>
+      </div>
+      <div class="r-modal-body">
+        <ng-content>
+          <div class="coninterko">
+            <br>
+                <div class="review">
+                    <br>
+                    <h1>Overall Rating: </h1>
+                </div>
+                <div class="flex">
+                    <button class="btn">Top Review</button>
+                    <button class="btn">Newest</button>
+                    <button class="btn">Highest Rating</button>
+                    <button class="btn">Lowest Rating</button>
+                </div>
+                
+                <ng-container *ngFor="let i of [1, 2, 3, 4, 5]">
+                    <div class="review">
+                        <br>
+                    </div>
+                </ng-container>
+          </div>
+        </ng-content>
+      </div>
+  </div>
+</div>
+}

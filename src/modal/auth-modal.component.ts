@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './auth-modal.component.css'
 })
 export class AuthModalComponent {
-  whatami = 'partner';
+  whatami = 'reviews';
 
   @Input() isOpen: boolean = false;
   @Input() title: string = 'Modal Title';
