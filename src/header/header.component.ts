@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthModalComponent } from "../modal/auth-modal.component";
 import { CommonModule } from '@angular/common';
-
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +13,13 @@ export class HeaderComponent {
   isModalOpen: boolean = false;
   isVisible: boolean = false;
 
-openModal(): void {
+  constructor(private globalService: GlobalService) {
+    this.globalService.setWhatAmIHead('guest');
+  }
+
+
+openModal(whatAmI: string): void {
+  this.globalService.setWhatAmI(whatAmI);
   this.isModalOpen = true;
   this.isVisible = false;
 }
@@ -22,7 +28,15 @@ closeModal() {
   this.isModalOpen = false;
 }
 
-  whatAmI = 'guest';
+  whatAmI = '';
+
+  ngOnInit() {
+    this.whatAmI = this.globalService.getWhatAmIHead();
+  }
+
+  ngDoCheck() {
+    this.whatAmI = this.globalService.getWhatAmIHead();
+  }
 
 
 isOpen: boolean = false;

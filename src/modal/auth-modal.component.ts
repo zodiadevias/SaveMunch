@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-auth-modal',
@@ -7,12 +8,29 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './auth-modal.component.html',
   styleUrl: './auth-modal.component.css'
 })
-export class AuthModalComponent {
-  whatami = 'reviews';
 
+
+export class AuthModalComponent {
+  
+  
   @Input() isOpen: boolean = false;
-  @Input() title: string = 'Modal Title';
   @Output() closeModal = new EventEmitter<void>();
+
+  whatami = ''
+  constructor(private globalService: GlobalService) {
+    
+  }
+
+  ngOnInit() {
+    this.whatami = this.globalService.getWhatAmI();
+  }
+
+  ngDoCheck() {
+    this.whatami = this.globalService.getWhatAmI();
+  }
+
+  
+
 
   close(): void {
     this.closeModal.emit();
@@ -20,5 +38,14 @@ export class AuthModalComponent {
 
  thisisme(whatami: string) {
   this.whatami = whatami;
+}
+
+
+
+
+
+
+login(){
+
 }
 }

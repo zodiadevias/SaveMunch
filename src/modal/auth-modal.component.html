@@ -1,4 +1,4 @@
-@if (whatami == 'user') {
+@if (whatami == 'guest') {
   <div class="modal" *ngIf="isOpen" (click)="close()">
   <div class="modal-content" (click)="$event.stopPropagation()">
     <span class="close" (click)="close()">&times;</span>
@@ -79,7 +79,7 @@
   <div class="r-modal-overlay" *ngIf="isOpen" (click)="close()">
     <div class="r-modal-content" (click)="$event.stopPropagation()">
       <div class="r-modal-header">
-        <h2 style="color: black">{{ title }}</h2>
+        <h2 style="color: black">Reviews</h2>
         <button class="close-button" (click)="close()">&times;</button>
       </div>
       <div class="r-modal-body">
