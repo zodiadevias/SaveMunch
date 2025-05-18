@@ -89,3 +89,44 @@ background: radial-gradient(circle at 50% 50%, #508D4E 0%, #1A5319 100%);
     margin-top: 8%;
     color: #1A5319;
 }
+
+
+@media screen and (max-width: 437px) {
+    .top{
+        display: none;
+    }
+
+    .pickup-container{
+        position: relative;
+        display: block;
+        width: 96%;
+        
+    }
+
+    .topdiv{
+        width: 100%;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    .right{
+        width: 100%;
+        margin: 0;
+    }
+
+    .address{
+        margin: 0;
+        width: 100%;
+    }
+    .receipt{
+        margin: 0;
+        margin-top: 2%;
+        width: 100%;
+    }
+
+
+
+    
+}
