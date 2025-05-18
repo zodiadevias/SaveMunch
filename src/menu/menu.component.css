@@ -70,3 +70,27 @@
 .store-item-add i{
     margin-top: 15px;
 }
+
+@media screen and (max-width: 437px) {
+    
+    .greet .logo{
+        width: 150px;
+        height: 150px;
+    }
+
+    .store-item-add{
+        font-size: 150px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .store-item{
+        width: 200px;
+        height: 200px;
+    }
+
+    .flex{
+        flex-direction: column;
+    }
+
+}

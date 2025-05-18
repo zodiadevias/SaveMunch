@@ -21,6 +21,10 @@ background: radial-gradient(circle at 50% 50%, #508D4E 0%, #1A5319 100%);
     
 }
 
+.delivery-window h1{
+    color: #FEFAE0;
+}
+
 .map{
     border: 2px solid #1A5319;
     border-radius: 10px;
@@ -39,3 +43,14 @@ background: radial-gradient(circle at 50% 50%, #508D4E 0%, #1A5319 100%);
     margin: 10px;
 }
 
+@media screen and (max-width: 437px) {
+    
+    .delivery-window{
+        width: 97%;
+    }
+
+    .icons{
+        font-size: 20px;
+    }
+    
+}

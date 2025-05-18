@@ -19,6 +19,7 @@ export class DashboardComponent{
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;
+    
   }
 
   @HostListener('window:resize', ['$event'])
