@@ -4,6 +4,9 @@
     <div class="signup-container">
     <h1>Sign Up</h1>
     <br>
+    
+
+    
 <table>
     <tr>
         <td>First Name</td>
@@ -13,29 +16,32 @@
         <td>
             <input class="flname" type="text">
         </td>
-        <td><input class="flname" type="text"></td>
+        <td>
+            <input class="flname" type="text">
+        </td>
     </tr>
-    </table>
-    <table>
+</table>
+<table>
         <tr>
         <td>Address</td>
-    </tr>
+        </tr>
     <tr>
         <td><input class="address" type="text"></td>
     </tr>
-    </table>
-    <table>
-    <tr>
-        <td>Contact Number</td>
-    </tr>
-    <tr>
-        <td>
-            <select name="area-code" id="area-code">
-                <option value="+63">+63</option>
-            </select>
-            <input class="contact" type="text">
-        </td>
-    </tr>
+</table>
+
+
+    <p>Contact Number</p>
+    <div class="flex-contact">
+        <select name="area-code" id="area-code">
+        <option value="+63">+63</option>
+        </select>
+        <input class="contact" type="number">
+    </div>
+
+    
+    
+<table>
     <tr>
         <td>Password</td>
     </tr>
@@ -57,6 +63,7 @@
 <p class="terms">By signing up, you agree to our <a (click)="window = 'terms'">Terms and Conditions</a> and <a (click)="window = 'privacy'">Privacy Policy</a></p>
 
     
+
 </div>
 }
 
@@ -78,7 +85,7 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
         </div>
 
-        <button class="btn-close" (click)="window = 'signup'">Close</button>
+        <button class="btn-close-t" (click)="window = 'signup'">Close</button>
     </div>
 }
 
@@ -99,6 +106,6 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, quibusdam modi perferendis dolor quia nesciunt iusto rerum eveniet reprehenderit a, enim et quisquam! Doloremque, dolorum unde quas in ullam minus?</p>
         </div>
 
-        <button class="btn-close" (click)="window = 'signup'">Close</button>
+        <button class="btn-close-t" (click)="window = 'signup'">Close</button>
     </div>
 }

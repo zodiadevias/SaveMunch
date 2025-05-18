@@ -2,7 +2,7 @@
     
     border: 2px solid #1A5319;
     border-radius: 10px;
-    width: 450px;
+    width: 545px;
     height: 500px;
     margin: auto;
     margin-top: 100px;
@@ -26,7 +26,7 @@ select{
     border-radius: 5px;
     border: 2px solid #1A5319;
     background-color: #FEFAE0;
-    height: 36px;
+    height: 30px;
 }
 
 .btn{
@@ -36,15 +36,15 @@ select{
     color: #FEFAE0;
     height: 40px;
     width: 100%;
-    margin-left: 4px;
+    
     cursor: pointer;
 }
 
 .flname{
-    width: 216px;
+    width: 223px;
 }
 .address{
-    width: 443px;
+    width: 238%;
 }
 
 .contact{
@@ -53,7 +53,7 @@ select{
 }
 
 .password{
-    width: 443px;
+    width: 238%;
     
 }
 
@@ -101,7 +101,7 @@ select{
     margin-bottom: 10px;
 }
 
-.btn-close{
+.btn-close-t{
     border-radius: 5px;
     border: 2px solid #1A5319;
     background-color: #1A5319;
@@ -111,5 +111,50 @@ select{
     margin-left: 4px;
     cursor: pointer;
     float: right;
-    margin-right: 50px;
+    
+}
+
+.flex-contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 437px) {
+    .signup-container{
+        width: 100%;
+        
+    }
+
+    .flname{
+        width: 100%;
+    }
+
+    .address{
+        width: 150%;
+    }
+
+    .select{
+        margin: 0;
+    }
+    .contact{
+        width: 100%;
+    }
+
+    .password{
+        width: 150%;
+    }
+
+
+    .tc-container{
+        width: 100%;
+    }
+
+    .terms-content{
+        width: 100%;
+    }
+
+
 }

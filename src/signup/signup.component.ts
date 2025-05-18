@@ -8,5 +8,5 @@ import { HeaderComponent } from "../header/header.component";
   styleUrl: './signup.component.css'
 })
 export class SignupComponent {
-  window = 'terms';
+  window = 'signup';
 }
