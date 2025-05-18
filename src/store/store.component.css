@@ -156,4 +156,29 @@
 }
 
 
+@media screen and (max-width: 437px) {
+    .logo{
+        width: 150px;
+        height: 150px;
+        margin: 0;
+    }
 
+    .top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        height: 45%;
+    
+    }
+
+    .block{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .flex h2 h3 i{
+        font-size: small;
+    }
+}
