@@ -16,10 +16,10 @@
   background-color: #D6EFD8;
   border-radius: 5px;
   padding: 20px;
-  width: 546px;
+  width: 600px;
   height: 694px;
   text-align: center;
-  position: relative;
+  /* position: relative; */
 }
 
 .close {
@@ -32,13 +32,14 @@
 }
 
 .modal-header h2 {
-  margin: 0;
+  
+  margin: auto;
   color: #1A5319;
   font-family: 'Poppins', sans-serif;
   padding: 20px;
   font-size: 40px;
   font-weight: 800;
-  position: relative;
+  /* position: relative; */
   top: 0px;
   right: 150px;
 }
@@ -48,7 +49,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
   font-weight: bold;
-  position: relative;
+  position: absolute;
   bottom: 35px;
   right: 165px;
 }
@@ -58,7 +59,7 @@ position: relative;
 border : 1px solid #1A5319;
 width: 220px;
 top: 34px;
-left: 130px;
+left: 300px;
 }
 
 .line2{
@@ -66,7 +67,7 @@ position: relative;
 border : 1px solid #1A5319;
 width: 220px;
 bottom: 30px;
-right: 130px;
+right: 0px;
 }
 
 .line p{
@@ -99,7 +100,8 @@ right: 130px;
 .btn-login, .btn-signup {
   width: 500px;
   height: 56px;
-  margin: 15px 0;
+  margin: auto;
+  margin-top: 2px;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -158,9 +160,9 @@ p {
 .modal-content-partner{
   background-color: #D6EFD8;
   border-radius: 5px;
-  padding: 20px;
+  padding: 0px;
   width: 546px;
-  height: 694px;
+  height: 550px;
   text-align: center;
   position: relative;
   top: 30px;
@@ -174,38 +176,44 @@ p {
   cursor: pointer;
   color: #1A5319
 }
-.modal-body, .modal-footer {
+.modal-body-partner, .modal-footer-partner {
   margin-top: 15px;
+  
+
 }
 
 .modal-header-partner h2 {
-  margin: 0;
+  margin: auto;
   color: #1A5319;
   font-family: 'Poppins', sans-serif;
   padding: 20px;
   font-size: 40px;
   font-weight: 800;
-  position: relative;
-  top: 0px;
+  
+  margin-top: 10%;
   right: 60px;
 }
 .text-partner {
-  margin: 20px 0;
+  margin: auto;
   color: #1A5319;
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
   font-weight: bold;
-  position: relative;
+  
   bottom: 35px;
   right: 165px;
 }
-input{
+.email-partner,  .password-partner{
   border-radius: 5px;
   border: 2px solid #1A5319;
   background-color: #FEFAE0;
   width: 450px;
   height: 56px;
+  
 }
+
+
+
 table{
   margin: 20px 0;
   padding: 10px 0;
