@@ -1,41 +1,53 @@
 
 @if(whatAmI == 'guest'){
+
     <div class="flex-container">
         <img src="img/logo.svg" alt="logo" class="logo">
         <h3>SaveMunch</h3>
-        <div class="hamberger">
-                <i class="fa-sharp fa-solid fa-bars" (click)="toggleDropdown()"></i>
-            </div>
-        <div class="globe">
-            <i class="fa-solid fa-earth-americas"></i>
-            <a href="">EN</a>
-            <i class="fa-solid fa-caret-down"></i>
-        </div>
         <div class="links">
             <a href="">Delivery</a>
             <a href="">Pick-up</a>
             <a href="">Shops</a>
-            <div class="authenticate">
-                <button (click)="openModal('guest')" class="btn-login">Login</button>
-                <app-auth-modal [isOpen]="isModalOpen" (closeModal)="closeModal()"></app-auth-modal>
-                <button class="btn-signup">Sign Up</button>
-            </div>
+        </div>
+        <div class="authenticate">
+            <button (click)="openModal('guest')" class="btn-login">Login</button>
+            <app-auth-modal [isOpen]="isModalOpen" (closeModal)="closeModal()"></app-auth-modal>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+
+        <div class="language">
+            <i class="fa-solid fa-earth-americas"></i>
+            <p>EN</p>
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+
+        <div class="hamburger-icon">
+            <i class="fa-sharp fa-solid fa-bars" (click)="toggleDropdown()"></i>
         </div>
     </div>
-    <div *ngIf="isOpen" class="dropdowncontainer">
-            <div class="dropbar">
-                <a (click)="openModal('partner')">Become a Partner</a>
-                <a href="">Sign in for Business</a>
-            </div> 
-            <div class="chatsupport">
-                <a href=""><i class="icon fa-solid fa-comments"></i>Chat Support</a>
-                
-            </div>
+
+    <div class="dropdown" *ngIf="isOpen">
+        <div class="authenticate-drop">
+            <button (click)="openModal('guest')" class="btn-login">Login</button>
+            <app-auth-modal [isOpen]="isModalOpen" (closeModal)="closeModal()"></app-auth-modal>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+        <div class="links-b">
+            <a href="">Delivery</a>
+            <a href="">Pick-up</a>
+            <a href="">Shops</a>
+        </div>
+        <div class="business">
+            <p>Become a Partner</p>
+            <p>Sign in for Business</p>
+            <p>Chat Support</p>
+        </div>
+        
     </div>
 }
 
 
-@if(whatAmI == 'admin'){
+@if(whatAmI == 'store'){
     <div class="flex-container">
         <img src="img/logo.svg" alt="logo" class="logo">
         <h3>SaveMunch</h3>
@@ -46,6 +58,33 @@
             <a href="">Reviews</a>
             <a href="">Inbox</a>
         </div>
+
+        <div class="language">
+            <i class="fa-solid fa-earth-americas"></i>
+            <p>EN</p>
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+
+        <div class="hamburger-icon">
+            <i class="fa-sharp fa-solid fa-bars" (click)="toggleDropdown()"></i>
+        </div>
+    </div>
+
+    <div class="dropdown" *ngIf="isOpen">
+        
+        <div class="links-b">
+            <a href="">Dashboard</a>
+            <a href="">Order History</a>
+            <a href="">Menu Management</a>
+            <a href="">Reviews</a>
+            <a href="">Inbox</a>
+        </div>
+        <div class="business">
+            <p>Become a Partner</p>
+            <p>Sign in for Business</p>
+            <p>Chat Support</p>
+        </div>
+        
     </div>
 }
 

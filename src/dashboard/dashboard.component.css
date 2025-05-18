@@ -121,12 +121,21 @@
 .flex-picks{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-gutter: stable;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    &:hover {
+        scrollbar-color: #1A5319 #FEFAE0;
+    }
 }
 
 .pick-item{
     background-color: #80AF81;
     margin: 20px;
-    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
     height: 200px;
     border-radius: 5px;
 }

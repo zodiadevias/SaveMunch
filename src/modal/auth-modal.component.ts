@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { GlobalService } from '../global.service';
 
+
 @Component({
   selector: 'app-auth-modal',
   imports: [CommonModule],
@@ -45,7 +46,9 @@ export class AuthModalComponent {
 
 
 
-login(){
+  login(){
+    
+  }
 
-}
+
 }

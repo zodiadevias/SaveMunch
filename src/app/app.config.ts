@@ -1,25 +1,26 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
 import { routes } from './app.routes';
-
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { provideHttpClient } from '@angular/common/http';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBb0oALSCaY8uQSKob79SgSzOdGchN5TgU",
-  authDomain: "blockvote-a35f5.firebaseapp.com",
-  projectId: "blockvote-a35f5",
-  storageBucket: "blockvote-a35f5.firebasestorage.app",
-  messagingSenderId: "549125708592",
-  appId: "1:549125708592:web:435120aca237cb4e5446f5",
-  measurementId: "G-34M5G5J5L7"
+  apiKey: "AIzaSyAcJrNYQh39fScVhn6jWJSv5GHjLgdX87g",
+  authDomain: "savemunch-9cd09.firebaseapp.com",
+  projectId: "savemunch-9cd09",
+  storageBucket: "savemunch-9cd09.firebasestorage.app",
+  messagingSenderId: "9541239258",
+  appId: "1:9541239258:web:61d0f66babba9668e600e3",
+  measurementId: "G-4WQHFMC38Q"
 };
 
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
+  providers: [
+    provideRouter(routes),
+    provideHttpClient(),
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideAuth(() => getAuth())
+  ]
 };

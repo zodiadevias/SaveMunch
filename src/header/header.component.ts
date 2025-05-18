@@ -3,6 +3,7 @@ import { AuthModalComponent } from "../modal/auth-modal.component";
 import { CommonModule } from '@angular/common';
 import { GlobalService } from '../global.service';
 
+
 @Component({
   selector: 'app-header',
   imports: [AuthModalComponent, CommonModule],
@@ -32,6 +33,7 @@ closeModal() {
 
   ngOnInit() {
     this.whatAmI = this.globalService.getWhatAmIHead();
+    console.log(this.whatAmI);
   }
 
   ngDoCheck() {
