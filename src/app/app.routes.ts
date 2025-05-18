@@ -11,6 +11,7 @@ import { BusinessreviewComponent } from '../businessreview/businessreview.compon
 import { ProfileComponent } from '../profile/profile.component';
 import { InboxComponent } from '../inbox/inbox.component';
 import { HistoryComponent } from '../history/history.component';
+import { MobileAuthComponent } from '../mobile-auth/mobile-auth.component';
 export const routes: Routes = [
     // kada update/change ng path please paki push agad sa git
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -25,5 +26,6 @@ export const routes: Routes = [
     {path: 'breviews', component: BusinessreviewComponent},
     {path: 'profile', component: ProfileComponent},
     {path: 'inbox', component: InboxComponent},
-    {path: 'history', component: HistoryComponent}
+    {path: 'history', component: HistoryComponent},
+    {path: 'mobile/login', component: MobileAuthComponent}
 ];

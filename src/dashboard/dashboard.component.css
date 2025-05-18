@@ -139,3 +139,65 @@
     height: 200px;
     border-radius: 5px;
 }
+
+
+@media screen and (max-width: 437px) {
+    .greet .logo{
+        width: 150px;
+        height: 150px;
+    }
+
+    .search{
+        width: 60%;
+        margin-top: 37%;
+    }
+
+    .filters{
+        display: none;
+        flex-direction: row;
+        width: 100%;
+        height: 40%;
+        margin: 0;
+        border-bottom: 1px solid #1A5319;
+        border-top: 1px solid #1A5319;
+        justify-content: center;
+        gap: 2%;
+        padding: 0;
+    }
+
+    .filters h3{
+        display: none;
+    }
+
+    .flex-container{
+        flex-direction: column;
+    }
+
+    .content-guest{
+        width: 436px;
+        height: 70%;
+    }
+
+    .picks{
+        width: 436px;
+        margin: 0;
+        height: 88%;
+        
+
+    }
+
+    .flex-picks{
+        width: 100%;
+    }
+
+    .pick-item{
+        min-width: 150px;
+        max-width: 150px;
+        min-height: 150px;
+        max-height: 150px;
+        
+    }
+
+
+    
+}

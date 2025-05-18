@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { AuthModalComponent } from "../modal/auth-modal.component";
 import { CommonModule } from '@angular/common';
 import { GlobalService } from '../global.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,11 +11,15 @@ import { GlobalService } from '../global.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  screenWidth: number = window.innerWidth;
+  
+
+
   isModalOpen: boolean = false;
   isVisible: boolean = false;
 
-  constructor(private globalService: GlobalService) {
+  constructor(private globalService: GlobalService, private router: Router) {
     this.globalService.setWhatAmIHead('guest');
   }
 
@@ -34,6 +39,12 @@ closeModal() {
   ngOnInit() {
     this.whatAmI = this.globalService.getWhatAmIHead();
     console.log(this.whatAmI);
+    this.screenWidth = window.innerWidth;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenWidth = window.innerWidth;
   }
 
   ngDoCheck() {
@@ -45,5 +56,16 @@ isOpen: boolean = false;
 
 toggleDropdown() {
   this.isOpen = !this.isOpen;
+}
+
+login(user: string){
+  
+  if(this.screenWidth < 768){
+    this.router.navigate(['/mobile/login']);
+
+    
+  }else{
+    this.openModal(user);
+  }
 }
 }

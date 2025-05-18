@@ -141,7 +141,7 @@
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
    .authenticate{
     display: none;
@@ -160,7 +160,7 @@
    }
 
     .language{
-        margin-left: 55%;
+        margin-left: 50%;
     }
 
     h3{
@@ -189,7 +189,9 @@
     
     .dropdown{
         height: 150px;
-        position: relative;
+        
     }
+
+    
 
 }

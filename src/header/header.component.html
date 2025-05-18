@@ -28,7 +28,7 @@
 
     <div class="dropdown" *ngIf="isOpen">
         <div class="authenticate-drop">
-            <button (click)="openModal('guest')" class="btn-login">Login</button>
+            <button (click)="login('guest')" class="btn-login">Login</button>
             <app-auth-modal [isOpen]="isModalOpen" (closeModal)="closeModal()"></app-auth-modal>
             <button class="btn-signup">Sign Up</button>
         </div>

@@ -1,4 +1,4 @@
-import { Component , OnInit} from '@angular/core';
+import { Component , HostListener, OnInit} from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import Chart, { scales } from 'chart.js/auto';
 import { CommonModule } from '@angular/common';
@@ -11,12 +11,20 @@ import { CommonModule } from '@angular/common';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent{
+  screenWidth: number = window.innerWidth;
   name : string = 'Tinapayan';
   public chart: any;
   whatAmI = 'guest';
 
 
+  ngOnInit() {
+    this.screenWidth = window.innerWidth;
+  }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenWidth = window.innerWidth;
+  }
 
 
 
