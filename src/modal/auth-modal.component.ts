@@ -69,6 +69,8 @@ export class AuthModalComponent {
     this.authService.loginWithGoogle()
       .then(result => {
         console.log('Logged in with Google:', result.user);
+        this.close();
+        this.globalService.setWhatAmIHead('user');
       })
       .catch(error => {
         console.error('Google login error:', error);

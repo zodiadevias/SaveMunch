@@ -3,6 +3,8 @@ import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signO
 import { signInWithPopup, GoogleAuthProvider} from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 import { User } from '@angular/fire/auth';
+import { onAuthStateChanged } from 'firebase/auth';
+import { GlobalService } from './global.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -30,5 +32,15 @@ export class AuthService {
     const provider = new GoogleAuthProvider();
     return signInWithPopup(this.auth, provider);
   }
+
+  constructor(public globalService: GlobalService) {
+    onAuthStateChanged(this.auth, (user: User | null) => {
+      if (user){
+        this.globalService.setWhatAmIHead('user');
+      }else{
+        this.globalService.setWhatAmIHead('guest');
+      }
+    });
+   }
 
 }

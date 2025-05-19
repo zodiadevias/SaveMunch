@@ -20,14 +20,10 @@ export class HeaderComponent implements OnInit {
   isVisible: boolean = false;
 
   constructor(private globalService: GlobalService, private router: Router, public authService: AuthService) {
-    if(this.authService.user$){
-      this.globalService.setWhatAmIHead('user');  
-    }else{
-      this.globalService.setWhatAmIHead('guest');
-    }
     
-
   }
+
+  
 
 
 openModal(whatAmI: string): void {
@@ -46,6 +42,7 @@ closeModal() {
     this.whatAmI = this.globalService.getWhatAmIHead();
     console.log(this.whatAmI);
     this.screenWidth = window.innerWidth;
+    
   }
 
   @HostListener('window:resize', ['$event'])
@@ -55,6 +52,7 @@ closeModal() {
 
   ngDoCheck() {
     this.whatAmI = this.globalService.getWhatAmIHead();
+    
   }
 
 
@@ -73,5 +71,15 @@ login(user: string){
   }else{
     this.openModal(user);
   }
+}
+
+
+logout(){
+  this.authService.logout()
+    .then(() => {
+      console.log('User logged out');
+      this.globalService.setWhatAmIHead('guest');
+    })
+    .catch(err => console.error('Logout error:', err));
 }
 }
