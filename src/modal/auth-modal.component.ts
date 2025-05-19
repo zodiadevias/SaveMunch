@@ -3,6 +3,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { GlobalService } from '../global.service';
 import { AuthService } from '../auth.service';
 import { FormsModule } from '@angular/forms';
+import { User } from '../models/user.model';
+import { FirestoreService } from '../firestore.service';
 
 @Component({
   selector: 'app-auth-modal',
@@ -49,8 +51,19 @@ export class AuthModalComponent {
 
   email = '';
   password = '';
-
+  name = '';
+  address = '';
+  phone = '';
+  contact = '';
   
+  clearFields() {
+    this.email = '';
+    this.password = '';
+    this.name = '';
+    this.address = '';
+    this.phone = '';
+    this.contact = '';
+  }
 
   onLogin() {
     this.authService.login(this.email, this.password)
@@ -64,7 +77,18 @@ export class AuthModalComponent {
 
   onRegister() {
     this.authService.register(this.email, this.password)
-      .then(user => console.log('Registered:', user))
+      .then(cred => {
+      //   const user: User = {
+      //   uid: cred.user.uid,
+      //   email: cred.user.email!,
+      //   name: this.name,
+      //   role: 'customer',
+      // };
+      // this.FirestoreService.createUser(user);
+      console.log('User registered:', cred.user);
+      this.close();
+      this.clearFields();
+      })
       .catch(err => console.error('Register error:', err));
   }
 

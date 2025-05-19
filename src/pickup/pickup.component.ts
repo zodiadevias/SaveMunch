@@ -8,5 +8,5 @@ import { HeaderComponent } from "../header/header.component";
   styleUrl: './pickup.component.css'
 })
 export class PickupComponent {
-
+  
 }
