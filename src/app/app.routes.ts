@@ -27,5 +27,5 @@ export const routes: Routes = [
     {path: 'profile', component: ProfileComponent},
     {path: 'inbox', component: InboxComponent},
     {path: 'history', component: HistoryComponent},
-    {path: 'mobile/login', component: MobileAuthComponent}
+    {path: 'm/login', component: MobileAuthComponent}
 ];
