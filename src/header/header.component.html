@@ -98,12 +98,9 @@
             <a href="">Pick-up</a>
             <a href="">Shops</a> 
         </div>
-        <div *ngIf="authService.user$ | async as user; else loggedOut">
+        <div *ngIf="authService.user$ | async as user">
             Logged in as: {{ user.email }}
         </div>
-        <ng-template #loggedOut>
-            <p>Please log in.</p>
-        </ng-template>
         <div class="authenticate">
                 <button class="btn-login" (click)="logout()">Logout</button>
             </div>
