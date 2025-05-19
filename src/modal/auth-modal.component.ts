@@ -20,7 +20,7 @@ export class AuthModalComponent {
   @Output() closeModal = new EventEmitter<void>();
 
   whatami = ''
-  constructor(private globalService: GlobalService, private authService: AuthService) {
+  constructor(private globalService: GlobalService, public authService: AuthService) {
     
   }
 
@@ -51,7 +51,11 @@ export class AuthModalComponent {
 
   onLogin() {
     this.authService.login(this.email, this.password)
-      .then(user => console.log('Logged in:', user))
+      .then(user => {
+        console.log('Logged in:', user);
+        this.close();
+        this.globalService.setWhatAmIHead('user');
+      })
       .catch(err => console.error('Login error:', err));
   }
 

@@ -3,7 +3,7 @@ import { AuthModalComponent } from "../modal/auth-modal.component";
 import { CommonModule } from '@angular/common';
 import { GlobalService } from '../global.service';
 import { Router } from '@angular/router';
-
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-header',
@@ -19,8 +19,14 @@ export class HeaderComponent implements OnInit {
   isModalOpen: boolean = false;
   isVisible: boolean = false;
 
-  constructor(private globalService: GlobalService, private router: Router) {
-    this.globalService.setWhatAmIHead('guest');
+  constructor(private globalService: GlobalService, private router: Router, public authService: AuthService) {
+    if(this.authService.user$){
+      this.globalService.setWhatAmIHead('user');  
+    }else{
+      this.globalService.setWhatAmIHead('guest');
+    }
+    
+
   }
 
 

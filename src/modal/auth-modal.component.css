@@ -17,9 +17,25 @@
   border-radius: 5px;
   padding: 20px;
   width: 600px;
-  height: 694px;
+  height: 750px;
   text-align: center;
   /* position: relative; */
+}
+
+input{
+  width: 500px;
+  height: 56px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #1A5319;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  top: 0px;
 }
 
 .close {
