@@ -138,6 +138,7 @@
     max-width: 250px;
     height: 200px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -195,6 +196,7 @@
         max-width: 150px;
         min-height: 150px;
         max-height: 150px;
+        
         
     }
 

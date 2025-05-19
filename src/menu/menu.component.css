@@ -71,7 +71,7 @@
     margin-top: 15px;
 }
 
-@media screen and (max-width: 437px) {
+@media screen and (max-width: 600px) {
     
     .greet .logo{
         width: 150px;

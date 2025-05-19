@@ -93,3 +93,33 @@ input{
     font-size: small;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 437px) {
+    .scroll{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;        
+        
+        width: 100%;
+        height: auto;
+        margin: auto;
+        font-size: small;
+        margin-bottom: 10px;
+    }
+
+    .parent-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 2px solid rgba(26, 83, 25, 0.5);
+        border-top: 2px solid rgba(26, 83, 25, 0.5);
+        width: 100%;
+        height: auto;
+        
+        
+    }
+}

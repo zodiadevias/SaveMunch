@@ -2,20 +2,40 @@ import { Component , HostListener, OnInit} from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import Chart, { scales } from 'chart.js/auto';
 import { CommonModule } from '@angular/common';
+import { AuthModalComponent } from '../modal/auth-modal.component';
+import { GlobalService } from '../global.service';
 
 
 @Component({
   selector: 'app-dashboard',
-  imports: [HeaderComponent, CommonModule],
+  imports: [HeaderComponent, CommonModule, AuthModalComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent{
   screenWidth: number = window.innerWidth;
+
+  isModalOpen: boolean = false;
+  isVisible: boolean = false;
+
+
   name : string = 'Tinapayan';
   public chart: any;
   whatAmI = 'guest';
 
+  constructor(private globalService: GlobalService) {
+    this.globalService.setWhatAmIHead('guest');
+  }
+
+  openModal(whatAmI: string): void {
+  this.globalService.setWhatAmI(whatAmI);
+  this.isModalOpen = true;
+  this.isVisible = false;
+}
+
+closeModal() {
+  this.isModalOpen = false;
+}
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;
