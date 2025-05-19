@@ -25,7 +25,7 @@ export class AuthModalComponent {
   @Output() closeModal = new EventEmitter<void>();
 
   whatami = ''
-  constructor(private globalService: GlobalService, public authService: AuthService) {
+  constructor(private globalService: GlobalService, public authService: AuthService, public firestoreService: FirestoreService) {
     
   }
 
@@ -78,13 +78,13 @@ export class AuthModalComponent {
   onRegister() {
     this.authService.register(this.email, this.password)
       .then(cred => {
-      //   const user: User = {
-      //   uid: cred.user.uid,
-      //   email: cred.user.email!,
-      //   name: this.name,
-      //   role: 'customer',
-      // };
-      // this.FirestoreService.createUser(user);
+        const user: User = {
+        uid: cred.user.uid,
+        email: cred.user.email!,
+        name: this.name,
+        role: 'customer',
+      };
+      this.firestoreService.createUser(user);
       console.log('User registered:', cred.user);
       this.close();
       this.clearFields();
