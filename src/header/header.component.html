@@ -8,7 +8,7 @@
         <div class="authenticate">
             <button (click)="openModal('guest')" class="btn-login">Login</button>
             <app-auth-modal [isOpen]="isModalOpen" (closeModal)="closeModal()"></app-auth-modal>
-            <button class="btn-signup">Sign Up</button>
+            <button class="btn-signup" (click)="signup('guestRegister')">Sign Up</button>
         </div>
 
         <div class="language">
@@ -25,8 +25,9 @@
     <div class="dropdown" *ngIf="isOpen">
         <div class="authenticate-drop">
             <button (click)="login('guest')" class="btn-login">Login</button>
+            
+            <button class="btn-signup" >Sign Up</button>
             <!-- <app-auth-modal [isOpen]="isModalOpen" (closeModal)="closeModal()"></app-auth-modal> -->
-            <button class="btn-signup">Sign Up</button>
         </div>
         <div class="links-b">
             <a href="">Delivery</a>

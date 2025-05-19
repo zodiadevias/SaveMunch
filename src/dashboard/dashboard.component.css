@@ -78,6 +78,10 @@
     
 }
 
+label{
+    margin-bottom: 2px;    
+}
+
 .filters{
     background-color: #FEFAE0;
     color: #1A5319;

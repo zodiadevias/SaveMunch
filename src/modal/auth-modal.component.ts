@@ -13,8 +13,11 @@ import { FormsModule } from '@angular/forms';
 
 
 export class AuthModalComponent {
-  
+  login = true;
 
+  gotoSignUp() {
+    this.login = false;
+  }
   
   @Input() isOpen: boolean = false;
   @Output() closeModal = new EventEmitter<void>();

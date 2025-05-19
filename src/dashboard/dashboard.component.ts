@@ -4,6 +4,7 @@ import Chart, { scales } from 'chart.js/auto';
 import { CommonModule } from '@angular/common';
 import { AuthModalComponent } from '../modal/auth-modal.component';
 import { GlobalService } from '../global.service';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -23,14 +24,21 @@ export class DashboardComponent{
   public chart: any;
   whatAmI = 'guest';
 
-  constructor(private globalService: GlobalService) {
-    this.globalService.setWhatAmIHead('guest');
+  constructor(private globalService: GlobalService, public authService: AuthService) {
+    // this.globalService.setWhatAmIHead('guest');
   }
 
-  openModal(whatAmI: string): void {
+openModal(whatAmI: string): void {
   this.globalService.setWhatAmI(whatAmI);
   this.isModalOpen = true;
   this.isVisible = false;
+}
+
+checkUser() {
+  console.log(this.authService.currentUser);
+  if (!this.authService.currentUser) {
+    this.openModal('guest');
+  }
 }
 
 closeModal() {

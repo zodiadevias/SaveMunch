@@ -1,33 +1,65 @@
 @if (whatami == 'guest') {
-  <div class="modal" *ngIf="isOpen" (click)="close()">
-  <div class="modal-content" (click)="$event.stopPropagation()">
-    <span class="close" (click)="close()">&times;</span>
-    <div class="modal-header">
-      <h2>Welcome!</h2>
-    </div>
-    <div class="text">
-      <p>Login or sign up to continue </p>
-    </div>
-    <div class="modal-body">
-      <button class="btn-Facebook">Continue with Facebook</button>
-      <button class="btn-Google" (click)="onGoogleLogin()">Continue with Google</button>
-      <div class="line">
-        <hr class = line1>
-        <p>or</p>
-        <hr class = line2>
+  
+    <div class="modal" *ngIf="isOpen" (click)="close()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <span class="close" (click)="close()">&times;</span>
+        <div class="modal-header">
+          <h2>Welcome!</h2>
+        </div>
+        <div class="text">
+          <p>Login or sign up to continue </p>
+        </div>
+        <div class="modal-body">
+          <button class="btn-Facebook">Continue with Facebook</button>
+          <button class="btn-Google" (click)="onGoogleLogin()">Continue with Google</button>
+          <div class="line">
+            <hr class = line1>
+            <p>or</p>
+            <hr class = line2>
+            
+          </div>
+        </div>
+        <input class="email" type="text" placeholder="Email" [(ngModel)]="email">
+        <input class="password" type="password" placeholder="Password" [(ngModel)]="password">
         
+        
+        <div class="modal-footer">
+          <button class="btn-login" (click)="onLogin()">Login</button>
+        </div>
+        <p>By signing up, you agree to our Terms & Conditions and Privacy Policy</p>
       </div>
     </div>
-    <input class="email" type="text" placeholder="Email" [(ngModel)]="email">
-    <input class="password" type="password" placeholder="Password" [(ngModel)]="password">
-    
-    
-    <div class="modal-footer">
-      <button class="btn-login" (click)="onLogin()">Login</button>
+}
+
+
+@if(whatami == 'guestRegister'){
+  <div class="modal" *ngIf="isOpen" (click)="close()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <span class="close" (click)="close()">&times;</span>
+        <div class="modal-header">
+          <h2>Registration</h2>
+        </div>
+        <div class="text">
+          <p>Register </p>
+        </div>
+        <div class="modal-body">
+          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Address">
+          <input type="text" placeholder="Contact Number">
+          <input class="email" type="text" placeholder="Email" [(ngModel)]="email">
+          <input class="password" type="password" placeholder="Password" [(ngModel)]="password">
+            
+          
+        </div>
+        
+        
+        
+        <div class="modal-footer">
+          <button class="btn-login" (click)="onRegister()">Register</button>
+        </div>
+        <p>By signing up, you agree to our Terms & Conditions and Privacy Policy</p>
+      </div>
     </div>
-    <p>By signing up, you agree to our Terms & Conditions and Privacy Policy</p>
-  </div>
-</div>
 }
 
 

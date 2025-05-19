@@ -73,6 +73,10 @@ login(user: string){
   }
 }
 
+signup(user: string){
+  this.openModal(user);
+}
+
 
 logout(){
   this.authService.logout()
