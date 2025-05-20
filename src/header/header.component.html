@@ -35,9 +35,9 @@
             <a href="">Shops</a>
         </div>
         <div class="business">
-            <p (click)="openModal('partner')">Become a Partner</p>
+            <p (click)="businessSignup()">Become a Partner</p>
+            <p (click)="openModal('partner')">Sign in for Business</p>
             <app-auth-modal [isOpen]="isModalOpen" (closeModal)="closeModal()"></app-auth-modal>
-            <p>Sign in for Business</p>
             <p>Chat Support</p>
         </div>
         
@@ -115,10 +115,6 @@
             
     </div>
     <div *ngIf="isOpen" class="dropdowncontainer">
-            <div class="dropbar">
-                <a href="">Become a Partner</a>
-                <a href="">Sign in for Business</a>
-            </div> 
             <div class="chatsupport">
                 <a href=""><i class="icon fa-solid fa-comments"></i>Chat Support</a>
                 

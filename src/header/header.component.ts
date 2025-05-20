@@ -77,6 +77,10 @@ signup(user: string){
   this.openModal(user);
 }
 
+businessSignup(){
+  this.router.navigate(['/b/register']);
+}
+
 
 logout(){
   this.authService.logout()

@@ -41,6 +41,7 @@ export class AuthModalComponent {
 
 
   close(): void {
+    this.clearFields();
     this.closeModal.emit();
   }
 
@@ -55,6 +56,9 @@ export class AuthModalComponent {
   address = '';
   phone = '';
   contact = '';
+  confirmPassword = '';
+  error = '';
+  
   
   clearFields() {
     this.email = '';
@@ -63,6 +67,8 @@ export class AuthModalComponent {
     this.address = '';
     this.phone = '';
     this.contact = '';
+    this.confirmPassword = '';
+    this.error = '';
   }
 
   onLogin() {
@@ -76,6 +82,10 @@ export class AuthModalComponent {
   }
 
   onRegister() {
+    if(this.password !== this.confirmPassword) {
+      this.error = 'Passwords do not match';
+      return;
+    }
     this.authService.register(this.email, this.password)
       .then(cred => {
         const user: User = {

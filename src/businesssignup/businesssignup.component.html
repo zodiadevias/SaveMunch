@@ -6,7 +6,7 @@
             <p>Upload Picture</p>
             <button class = "btn-local">Choose From Local</button>
         </div>
-        <button class = "btn-submit">Submit</button>
+        <button class = "btn-submit" (click)="fetchData()">Submit</button>
     </div>
 
     <div class="right">
@@ -42,9 +42,7 @@
         </tr>
         <tr>
             <td>
-                <select class = "area-code" name="area-code" id="area-code">
-                    <option value="+63">+63</option>
-                </select>
+                
                 <input class="contact" type="text">
             </td>
             <td><input class="id" type="text"></td>
@@ -58,13 +56,8 @@
         <tr>
             <td><input class="business-name" type="text"></td>
             <td>
-                <select class = "location" name="location" id="location">
-                <option value="Cebu">Cebu</option>
-                <option value="Manila"></option>
-                <option value="Manila"></option>
-                <option value="Manila"></option>
-                <option value="Manila"></option>
-                <option value="Manila"></option>
+                <select class = "location" name="location" id="location" [(ngModel)]="selectedLocation">
+                    <option *ngFor="let location of locations" [value]="location.code">{{location.name}}</option>
                 </select>
             </td>
         </tr>

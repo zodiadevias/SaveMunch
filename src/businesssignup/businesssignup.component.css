@@ -52,6 +52,7 @@
     height: 40px;
     width: 150px;
     cursor: pointer;
+    font-size: small;
 }
 .btn-submit {
     position: relative;
