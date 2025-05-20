@@ -3,10 +3,11 @@ import { HeaderComponent } from "../header/header.component";
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Firestore, collection, addDoc } from '@angular/fire/firestore';
+import { Firestore, collection, addDoc , doc, setDoc} from '@angular/fire/firestore';
 import { Storage, ref, uploadBytes, getDownloadURL } from '@angular/fire/storage';
 import { v4 as uuidv4 } from 'uuid';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+
 
 @Component({
   selector: 'app-businesssignup',
@@ -72,51 +73,52 @@ export class BusinesssignupComponent implements OnInit{
   }
 
   async onRegister(): Promise<void> {
-    if (!this.logoFile) {
-      alert('Please upload a logo image.');
-      return;
-    }
+  if (!this.logoFile) {
+    alert('Please upload a logo image.');
+    return;
+  }
 
-    if (this.password !== this.confirmPassword) {
-      alert('Passwords do not match.');
-      return;
-    }
+  if (this.password !== this.confirmPassword) {
+    alert('Passwords do not match.');
+    return;
+  }
 
-    try {
-      // ✅ Step 1: Register user first
-      const auth = getAuth();
-      const userCredential = await createUserWithEmailAndPassword(auth, this.email, this.password);
-      const uid = userCredential.user.uid;
+  try {
+    // Step 1: Register user first
+    const auth = getAuth();
+    const userCredential = await createUserWithEmailAndPassword(auth, this.email, this.password);
+    const uid = userCredential.user.uid;
 
-      // ✅ Step 2: Upload logo after authentication
-      const filePath = `store_logos/${uid}/${uuidv4()}_${this.logoFile.name}`;
-      const fileRef = ref(this.storage, filePath);
-      await uploadBytes(fileRef, this.logoFile);
-      const logoUrl = await getDownloadURL(fileRef);
+    // Step 2: Upload logo after authentication
+    const filePath = `store_logos/${uid}/${uuidv4()}_${this.logoFile.name}`;
+    const fileRef = ref(this.storage, filePath);
+    await uploadBytes(fileRef, this.logoFile);
+    const logoUrl = await getDownloadURL(fileRef);
 
-      // ✅ Step 3: Save store data
-      const storesRef = collection(this.firestore, 'store_owners');
-      await addDoc(storesRef, {
-        uid,
-        fullName: this.fullname,
-        address: this.address,
-        bir: this.bir,
-        contactNumber: this.contact,
-        idNumber: this.id,
-        businessName: this.businessname,
-        location: this.selectedLocation,
-        email: this.email,
-        logoUrl,
-        createdAt: new Date(),
-      });
+    // Step 3: Save store data to 'stores' collection with document ID = uid
+    const storeDocRef = doc(this.firestore, 'stores', uid);
+    await setDoc(storeDocRef, {
+      ownerId: uid,  // must be 'ownerId' to match rules
+      fullName: this.fullname,
+      address: this.address,
+      bir: this.bir,
+      contactNumber: this.contact,
+      idNumber: this.id,
+      businessName: this.businessname,
+      location: this.selectedLocation,
+      email: this.email,
+      logoUrl: logoUrl,
+      createdAt: new Date(),
+    });
 
-      alert('Store registered successfully!');
-      this.clearfields();
-    } catch (error) {
-      console.error('Error during registration:', error);
-      alert('An error occurred. Please try again.');
-    }
+    alert('Store registered successfully!');
+    this.clearfields();
+  } catch (error) {
+    console.error('Error during registration:', error);
+    alert('An error occurred. Please try again.');
+  }
 }
+
 
 
 
