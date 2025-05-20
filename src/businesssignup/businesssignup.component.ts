@@ -25,6 +25,33 @@ export class BusinesssignupComponent implements OnInit{
       this.locations = data;
     });
   }
+
+  fullname: string = '';
+  businessname: string = '';
+  email: string = '';
+  password: string = '';
+  confirmPassword: string = '';
+  address: string = '';
+  phone: string = '';
+  contact: string = '';
+  bir: string = '';
+  id: string = '';
+  error: string = '';
+  
+  clearfields(){
+    this.fullname = '';
+    this.businessname = '';
+    this.email = '';
+    this.password = '';
+    this.confirmPassword = '';
+    this.address = '';
+    this.phone = '';
+    this.contact = '';
+    this.bir = '';
+    this.id = '';
+    this.error = '';
+    this.selectedLocation = '';
+  }
   
 
 }

@@ -14,15 +14,12 @@
         <hr>
     <table>
         <tr>
-            <td>First Name</td>
-            <td>Last Name</td>
-            <td>Middle Name</td>
+            <td>Full Name</td>
+            
             
         </tr>
         <tr>
-            <td><input class="flname" type="text"></td>
-            <td><input class="flname" type="text"></td>
-            <td><input class="flname" type="text"></td>
+            <td><input class="flname" type="text" [(ngModel)]="fullname"></td>
         </tr>
     </table>
     <table>
@@ -31,8 +28,8 @@
             <td>BIR</td>
         </tr>
         <tr>
-            <td><input class="address" type="text"></td>
-            <td><input class="bir" type="text"></td>
+            <td><input class="address" type="text" [(ngModel)]="address"></td>
+            <td><input class="bir" type="text" [(ngModel)]="bir"></td>
         </tr>
     </table>
     <table>
@@ -43,9 +40,9 @@
         <tr>
             <td>
                 
-                <input class="contact" type="text">
+                <input class="contact" type="text" [(ngModel)]="contact">
             </td>
-            <td><input class="id" type="text"></td>
+            <td><input class="id" type="text" [(ngModel)]="id"></td>
         </tr>
     </table>
     <table>
@@ -66,10 +63,11 @@
             <td>Confirm Password</td>
         </tr>
         <tr>
-            <td><input class="password" type="password"></td>
-            <td><input class="password" type="password"></td>
+            <td><input class="password" type="password" [(ngModel)]="password"></td>
+            <td><input class="password" type="password" [(ngModel)]="confirmPassword"></td>
         </tr>
 </table>
+    <div>{{error}}</div>
     <button class = "btn-signup">Sign Up</button>
     </div>
 </div>

@@ -44,7 +44,7 @@ export class FirestoreService {
 
   // 3. Create store
   async createStore(store: Store) {
-    const ref = doc(this.firestore, `stores/${store.id}`);
+    const ref = doc(this.firestore, `stores/${store.uid}`);
     await setDoc(ref, {
       ...store,
       createdAt: Timestamp.now(),
@@ -54,7 +54,7 @@ export class FirestoreService {
   // 4. Get store details
   getStore(storeId: string): Observable<Store> {
     const ref = doc(this.firestore, `stores/${storeId}`);
-    return docData(ref, { idField: 'id' }) as Observable<Store>;
+    return docData(ref, { idField: 'uid' }) as Observable<Store>;
   }
 
   // 5. Add food item to menu
