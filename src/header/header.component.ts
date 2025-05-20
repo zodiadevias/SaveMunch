@@ -78,6 +78,8 @@ signup(user: string){
 }
 
 businessSignup(){
+  this.whatAmI = 'none';
+  console.log(this.whatAmI);
   this.router.navigate(['/b/register']);
 }
 

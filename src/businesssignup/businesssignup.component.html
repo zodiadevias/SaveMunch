@@ -2,13 +2,17 @@
 <div class="signup-window">
     <div class="left">
         <div class="picholder">
-            <i class="fa-solid fa-upload"></i>
+            <div *ngIf="!logoPreview">
+                <i  class="fa-solid fa-upload"></i>
+            </div>
             <img *ngIf="logoPreview" [src]="logoPreview" alt="Logo Preview" class="preview"/>
-            <p>Upload Picture</p>
-            <input type="file" (change)="onLogoSelected($event)"  accept="image/*" class="btn-local">
         </div>
+        
+            <input type="file" (change)="onLogoSelected($event)"  accept="image/*" class="btn-local">
     </div>
 
+
+    
     <div class="right">
         <h1>Business Sign Up</h1>
         <hr>
@@ -27,10 +31,15 @@
     <table>
         <tr>
             <td>Address</td>
-            <td>BIR</td>
+            
         </tr>
         <tr>
             <td><input class="address" type="text" [(ngModel)]="address"></td>
+        </tr>
+        <tr>
+            <td>BIR</td>
+        </tr>
+        <tr>
             <td><input class="bir" type="text" [(ngModel)]="bir"></td>
         </tr>
     </table>
@@ -56,7 +65,7 @@
             <td><input class="business-name" type="text" [(ngModel)]="businessname"></td>
             <td>
                 <select class = "location" name="location" id="location" [(ngModel)]="selectedLocation">
-                    <option *ngFor="let location of locations" [value]="location.code">{{location.name}}</option>
+                    <option *ngFor="let location of locations" [value]="location.name">{{location.name}}</option>
                 </select>
             </td>
         </tr>

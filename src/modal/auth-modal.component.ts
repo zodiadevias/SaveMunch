@@ -5,6 +5,7 @@ import { AuthService } from '../auth.service';
 import { FormsModule } from '@angular/forms';
 import { User } from '../models/user.model';
 import { FirestoreService } from '../firestore.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth-modal',
@@ -17,6 +18,8 @@ import { FirestoreService } from '../firestore.service';
 export class AuthModalComponent {
   login = true;
 
+
+
   gotoSignUp() {
     this.login = false;
   }
@@ -25,9 +28,12 @@ export class AuthModalComponent {
   @Output() closeModal = new EventEmitter<void>();
 
   whatami = ''
-  constructor(private globalService: GlobalService, public authService: AuthService, public firestoreService: FirestoreService) {
-    
-  }
+  constructor(
+    private globalService: GlobalService, 
+    public authService: AuthService, 
+    public firestoreService: FirestoreService, 
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.whatami = this.globalService.getWhatAmI();
@@ -77,6 +83,7 @@ export class AuthModalComponent {
         console.log('Logged in:', user);
         this.close();
         this.globalService.setWhatAmIHead('user');
+        this.router.navigate(['/dashboard']);
       })
       .catch(err => console.error('Login error:', err));
   }
@@ -98,6 +105,7 @@ export class AuthModalComponent {
       console.log('User registered:', cred.user);
       this.close();
       this.clearFields();
+      this.router.navigate(['/dashboard']);
       })
       .catch(err => console.error('Register error:', err));
   }
@@ -108,6 +116,7 @@ export class AuthModalComponent {
         console.log('Logged in with Google:', result.user);
         this.close();
         this.globalService.setWhatAmIHead('user');
+        this.router.navigate(['/dashboard']);
       })
       .catch(error => {
         console.error('Google login error:', error);

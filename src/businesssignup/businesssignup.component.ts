@@ -96,7 +96,7 @@ export class BusinesssignupComponent implements OnInit{
     const logoUrl = await getDownloadURL(fileRef);
 
     // Step 3: Save store data to 'stores' collection with document ID = uid
-    const storeDocRef = doc(this.firestore, 'stores', uid);
+    const storeDocRef = doc(this.firestore, 'users', uid);
     await setDoc(storeDocRef, {
       ownerId: uid,  // must be 'ownerId' to match rules
       fullName: this.fullname,
@@ -108,6 +108,7 @@ export class BusinesssignupComponent implements OnInit{
       location: this.selectedLocation,
       email: this.email,
       logoUrl: logoUrl,
+      role: 'business',
       createdAt: new Date(),
     });
 
