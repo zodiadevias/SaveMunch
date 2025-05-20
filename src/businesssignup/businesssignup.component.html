@@ -3,10 +3,10 @@
     <div class="left">
         <div class="picholder">
             <i class="fa-solid fa-upload"></i>
+            <img *ngIf="logoPreview" [src]="logoPreview" alt="Logo Preview" class="preview"/>
             <p>Upload Picture</p>
-            <button class = "btn-local">Choose From Local</button>
+            <input type="file" (change)="onLogoSelected($event)"  accept="image/*" class="btn-local">
         </div>
-        <button class = "btn-submit" (click)="fetchData()">Submit</button>
     </div>
 
     <div class="right">
@@ -15,11 +15,13 @@
     <table>
         <tr>
             <td>Full Name</td>
-            
+            <td>Email</td>
             
         </tr>
         <tr>
+
             <td><input class="flname" type="text" [(ngModel)]="fullname"></td>
+            <td><input class="email" type="text" [(ngModel)]="email"></td>
         </tr>
     </table>
     <table>
@@ -51,7 +53,7 @@
             <td>Location</td>
         </tr>
         <tr>
-            <td><input class="business-name" type="text"></td>
+            <td><input class="business-name" type="text" [(ngModel)]="businessname"></td>
             <td>
                 <select class = "location" name="location" id="location" [(ngModel)]="selectedLocation">
                     <option *ngFor="let location of locations" [value]="location.code">{{location.name}}</option>
@@ -68,6 +70,6 @@
         </tr>
 </table>
     <div>{{error}}</div>
-    <button class = "btn-signup">Sign Up</button>
+    <button class = "btn-signup" (click)="onRegister()">Sign Up</button>
     </div>
 </div>

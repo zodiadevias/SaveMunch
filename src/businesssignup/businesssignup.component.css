@@ -54,6 +54,12 @@
     cursor: pointer;
     font-size: small;
 }
+
+.preview{
+    width: 100px;
+    height: 100px;
+}
+
 .btn-submit {
     position: relative;
     left: 60px;
