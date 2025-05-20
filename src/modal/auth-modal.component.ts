@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { User } from '../models/user.model';
 import { FirestoreService } from '../firestore.service';
 import { Router } from '@angular/router';
-import { RolesService } from '../roles.service';
+
 
 @Component({
   selector: 'app-auth-modal',
@@ -34,8 +34,7 @@ export class AuthModalComponent {
     private globalService: GlobalService, 
     public authService: AuthService, 
     public firestoreService: FirestoreService, 
-    private router: Router,
-    private rolesService: RolesService
+    private router: Router
   ) {}
 
   ngOnInit() {

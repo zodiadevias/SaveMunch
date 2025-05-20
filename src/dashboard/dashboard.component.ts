@@ -7,7 +7,7 @@ import { GlobalService } from '../global.service';
 import { AuthService } from '../auth.service';
 import { FirestoreService } from '../firestore.service';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
-
+import { UserdataService } from '../userdata.service';
 
 
 
@@ -34,30 +34,16 @@ export class DashboardComponent{
 
 
 
-  constructor(private globalService: GlobalService, public authService: AuthService, public firestoreService: FirestoreService) {
+  constructor(private globalService: GlobalService, public authService: AuthService, public firestoreService: FirestoreService, private userdataService: UserdataService) {
     // this.globalService.setWhatAmIHead('guest');
     
   }
 
 
-  async getBName(){
-    const db = getFirestore();
-    const user = this.authService.currentUser;
-
-    if (user) {
-      const uid = user.uid;
-      const userRef = doc(db, 'users', uid);
-      const userSnap = await getDoc(userRef);
-
-      if (userSnap.exists()) {
-        const userData = userSnap.data();
-        this.name = userData['businessName'] || null;
-        console.log('Business name:', this.name);
-      }
-    }
-
-    return null;
-}
+  async getUserData() {
+    return await this.userdataService.getUserData();
+  }
+  
 
 openModal(whatAmI: string): void {
   this.globalService.setWhatAmI(whatAmI);
@@ -78,12 +64,13 @@ closeModal() {
 
   async ngOnInit() {
     this.screenWidth = window.innerWidth;
-    this.getBName();
+    
   }
 
   ngDoCheck() {
     this.whatAmI = this.globalService.getWhatAmIDashboard();
     console.log(this.whatAmI);
+    
   }
   
   
