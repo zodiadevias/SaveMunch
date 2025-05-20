@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { User } from '../models/user.model';
 import { FirestoreService } from '../firestore.service';
 import { Router } from '@angular/router';
+import { RolesService } from '../roles.service';
 
 @Component({
   selector: 'app-auth-modal',
@@ -17,6 +18,7 @@ import { Router } from '@angular/router';
 
 export class AuthModalComponent {
   login = true;
+  role: any = '';
 
 
 
@@ -32,11 +34,13 @@ export class AuthModalComponent {
     private globalService: GlobalService, 
     public authService: AuthService, 
     public firestoreService: FirestoreService, 
-    private router: Router
+    private router: Router,
+    private rolesService: RolesService
   ) {}
 
   ngOnInit() {
     this.whatami = this.globalService.getWhatAmI();
+    
   }
 
   ngDoCheck() {

@@ -26,6 +26,6 @@ export const routes: Routes = [
     {path: 'b/reviews', component: BusinessreviewComponent},
     {path: 'profile', component: ProfileComponent},
     {path: 'inbox', component: InboxComponent},
-    {path: 'history', component: HistoryComponent},
+    {path: 'b/history', component: HistoryComponent},
     {path: 'm/login', component: MobileAuthComponent}
 ];

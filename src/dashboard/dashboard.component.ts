@@ -5,6 +5,12 @@ import { CommonModule } from '@angular/common';
 import { AuthModalComponent } from '../modal/auth-modal.component';
 import { GlobalService } from '../global.service';
 import { AuthService } from '../auth.service';
+import { FirestoreService } from '../firestore.service';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+
+
+
+
 
 
 @Component({
@@ -20,13 +26,38 @@ export class DashboardComponent{
   isVisible: boolean = false;
 
 
-  name : string = 'Tinapayan';
+  name : any = '';
   public chart: any;
-  whatAmI = 'guest';
+  whatAmI = '';
+  
+  
 
-  constructor(private globalService: GlobalService, public authService: AuthService) {
+
+
+  constructor(private globalService: GlobalService, public authService: AuthService, public firestoreService: FirestoreService) {
     // this.globalService.setWhatAmIHead('guest');
+    
   }
+
+
+  async getBName(){
+    const db = getFirestore();
+    const user = this.authService.currentUser;
+
+    if (user) {
+      const uid = user.uid;
+      const userRef = doc(db, 'users', uid);
+      const userSnap = await getDoc(userRef);
+
+      if (userSnap.exists()) {
+        const userData = userSnap.data();
+        this.name = userData['businessName'] || null;
+        console.log('Business name:', this.name);
+      }
+    }
+
+    return null;
+}
 
 openModal(whatAmI: string): void {
   this.globalService.setWhatAmI(whatAmI);
@@ -45,16 +76,30 @@ closeModal() {
   this.isModalOpen = false;
 }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.screenWidth = window.innerWidth;
-    
+    this.getBName();
   }
+
+  ngDoCheck() {
+    this.whatAmI = this.globalService.getWhatAmIDashboard();
+    console.log(this.whatAmI);
+  }
+  
+  
+
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.screenWidth = window.innerWidth;
   }
 
+ 
+  
+
+  
+
+  
 
 
   // ngOnInit(){

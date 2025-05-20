@@ -36,7 +36,7 @@
         </div>
         <div class="business">
             <p (click)="businessSignup()">Become a Partner</p>
-            <p (click)="openModal('partner')">Sign in for Business</p>
+            <!-- <p (click)="openModal('partner')">Sign in for Business</p> -->
             <app-auth-modal [isOpen]="isModalOpen" (closeModal)="closeModal()"></app-auth-modal>
             <p>Chat Support</p>
         </div>
@@ -50,12 +50,15 @@
         <img src="img/logo.svg" alt="logo" class="logo">
         <h3>SaveMunch</h3>
         <div class="links">
-            <a href="">Dashboard</a>
-            <a href="">Order History</a>
-            <a href="">Menu Management</a>
-            <a href="">Reviews</a>
-            <a href="">Inbox</a>
+            <a routerLink="/dashboard">Dashboard</a>
+            <a routerLink="/b/history">Order History</a>
+            <a routerLink="/b/menu">Menu Management</a>
+            <a routerLink="/b/reviews">Reviews</a>
+            <a routerLink="/inbox">Inbox</a>
         </div>
+        <div class="authenticate">
+                <button class="btn-login" (click)="logout()">Logout</button>
+            </div>
 
         <div class="language">
             <i class="fa-solid fa-earth-americas"></i>
@@ -78,8 +81,7 @@
             <a href="">Inbox</a>
         </div>
         <div class="business">
-            <p>Become a Partner</p>
-            <p>Sign in for Business</p>
+            
             <p>Chat Support</p>
         </div>
         
@@ -115,9 +117,9 @@
             
     </div>
     <div *ngIf="isOpen" class="dropdowncontainer">
-            <div class="chatsupport">
-                <a href=""><i class="icon fa-solid fa-comments"></i>Chat Support</a>
-                
+            <div class="business">
+            
+                <p>Chat Support</p>
             </div>
     </div>
 }

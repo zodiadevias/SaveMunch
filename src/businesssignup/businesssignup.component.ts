@@ -7,6 +7,9 @@ import { Firestore, collection, addDoc , doc, setDoc} from '@angular/fire/firest
 import { Storage, ref, uploadBytes, getDownloadURL } from '@angular/fire/storage';
 import { v4 as uuidv4 } from 'uuid';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -25,6 +28,8 @@ export class BusinesssignupComponent implements OnInit{
   httpClient = inject(HttpClient);
   firestore = inject(Firestore);
   storage = inject(Storage);
+  auth = inject(AuthService);
+  router = inject(Router);
   locations: any = [];
 
   fetchData() {
@@ -114,6 +119,7 @@ export class BusinesssignupComponent implements OnInit{
 
     alert('Store registered successfully!');
     this.clearfields();
+    this.router.navigate(['/dashboard']);
   } catch (error) {
     console.error('Error during registration:', error);
     alert('An error occurred. Please try again.');

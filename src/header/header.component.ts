@@ -2,12 +2,13 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { AuthModalComponent } from "../modal/auth-modal.component";
 import { CommonModule } from '@angular/common';
 import { GlobalService } from '../global.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'app-header',
-  imports: [AuthModalComponent, CommonModule],
+  imports: [AuthModalComponent, CommonModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
