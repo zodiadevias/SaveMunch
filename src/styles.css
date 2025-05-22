@@ -3,6 +3,11 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #D6EFD8;
+
 }
-html, body { height: 100%; }
+html, body { 
+    height: 100%;
+    display: block;
+    max-width: 100%;
+ }
 
